@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest HTML + CSS + JS intermediário - Formulário com validação</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+</head>
+<body>
+    <main class="container">
+        <section class="info">
+            <h2>FICOU COM DÚVIDA? <br> NOS MANDE UMA MENSAGEM!</h2>
+            <p class="info-atendimento">caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+        </section>
+
+        <section class="formulario">
+            <form action="." method="get"
+            id="form">
+                <div class="campo-obrigatorio">
+
+                    <ul class="">
+                        <li class="preencher">
+                            <input type="text" name="nome" id="nome" placeholder="Nome completo"><br>
+                            <small class="obrigatorio">Campo obrigatório</small>
+                        </li>
+                        <li class="preencher">
+                            <input type="email" name="email" id="email" placeholder="Email"><br>
+                            <small class="obrigatorio">Campo obrigatório</small>
+                        </li>
+
+                        <li class="preencher">
+                            <input type="tel" name="telefone" id="tel" placeholder="Telefone* (**) *****-****" maxlength="11" onkeypress="return somenteNumeros(event)">
+                            <br>
+                            <small class="obrigatorio">Campo obrigatório</small>
+                        </li>
+
+                        <li class="preencher">
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="5" placeholder="Mensagem"></textarea><br>
+                            <small class="obrigatorio">Campo obrigatório</small>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <p class="texto">*Campos obrigatórios</p>
+                <input class="btn-enviar" type="submit" value="Enviar">
+                
+            </form>
+        </section>
+    </main>
+
+    <script src="src/js/config.js"></script>
+</body>
+</html>
